@@ -1,0 +1,4 @@
+﻿Port	Project	
+5222	NetIM: Openfire default listening
+5901	录音服务器CreRecordServer: CommServer-App for RecordServer
+5902	视频播放控件本地端口（媒体断开是7002开始，每次+2）

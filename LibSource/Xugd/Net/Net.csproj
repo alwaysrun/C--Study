@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{223DDB11-57C1-4D11-B8E5-EFEFD7381C0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SHCre.Xugd.Net</RootNamespace>
+    <AssemblyName>SHCre.Xugd.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SHCre.Xugd.Net.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Socket\CommCheckAlive.cs" />
+    <Compile Include="Socket\CommHeader.cs" />
+    <Compile Include="Socket\CommReceived.cs" />
+    <Compile Include="Socket\CommTimer.cs" />
+    <Compile Include="Socket\TcpClient.cs" />
+    <Compile Include="Socket\UdpClient.cs" />
+    <Compile Include="Socket\UdpListener.cs" />
+    <Compile Include="Socket\UdpLoginout.cs" />
+    <Compile Include="Socket\UdpServer.cs" />
+    <Compile Include="XmppStandby\ClientData.cs" />
+    <Compile Include="XmppStandby\ClientLogin.cs" />
+    <Compile Include="XmppStandby\ServerSync.cs" />
+    <Compile Include="XmppStandby\ServerUsers.cs" />
+    <Compile Include="XmppStandby\XStandbyClient.cs" />
+    <Compile Include="XmppStandby\XStandbyConfig.cs" />
+    <Compile Include="XmppStandby\XStandbyData.cs" />
+    <Compile Include="XmppStandby\XStandbyServer.cs" />
+    <Compile Include="Xmpp\XmppClient.cs" />
+    <Compile Include="Xmpp\XmppConfig.cs" />
+    <Compile Include="Xmpp\XmppHandle.cs" />
+    <Compile Include="Xmpp\XmppImport.cs" />
+    <Compile Include="Xmpp\XmppPresence.cs" />
+    <Compile Include="Ftp\FtpClient.cs" />
+    <Compile Include="Ftp\FtpCode.cs" />
+    <Compile Include="Ftp\FtpConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Socket\CommConfig.cs" />
+    <Compile Include="Socket\CommConnection.cs" />
+    <Compile Include="Socket\CommListener.cs" />
+    <Compile Include="Socket\CommServer.cs" />
+    <Compile Include="Socket\EventArgs.cs" />
+    <Compile Include="Socket\TcpListener.cs" />
+    <Compile Include="Socket\TcpServer.cs" />
+    <Compile Include="XNetAddress.cs" />
+    <Compile Include="XNetException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CFile\CFile.csproj">
+      <Project>{A1F04DDB-73DD-4C02-AFFB-B41C09946D18}</Project>
+      <Name>CFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{CFCD1530-535B-4BA3-838E-757A2CB39A38}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Config\Config.csproj">
+      <Project>{EA805AD9-5CB9-4F2B-99FE-AE22D26176D4}</Project>
+      <Name>Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{C0B7AEDE-B0AC-4F17-B4A4-CBE7B9CCA4EC}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extension\Extension.csproj">
+      <Project>{24B7B103-654A-4A96-9942-96589BD9D8DF}</Project>
+      <Name>Extension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_PortAssigned.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
